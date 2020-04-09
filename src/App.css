@@ -1,0 +1,12 @@
+.later {
+  display: center;
+  width: 300px;
+  margin: 0em, auto;
+}
+
+.text {
+  display: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: auto;
+}

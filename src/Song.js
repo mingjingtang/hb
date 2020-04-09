@@ -1,9 +1,11 @@
 import React from "react";
+import "./Song.css";
+import ReactAudioPlayer from "react-audio-player";
 
-const Song = () => {
+const Song = (props) => {
   return (
-    <div>
-      <h1>song</h1>
+    <div className="player">
+      <ReactAudioPlayer src={props.song} autoPlay controls />
     </div>
   );
 };

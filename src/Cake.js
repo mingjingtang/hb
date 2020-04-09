@@ -4,7 +4,7 @@ const Cake = (props) => {
   return (
     <div>
       <img src={props.cake} />
-      <h1>cake</h1>
+      {props.words}
     </div>
   );
 };
