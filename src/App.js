@@ -4,6 +4,7 @@ import Cake from "./Cake";
 import Song from "./Song";
 import soundfile from "./resource/song.mp3";
 import cakefile from "./resource/birthdayCake.gif";
+import firstPic from "./resource/firstPic.jpg";
 
 class App extends React.Component {
   state = {
@@ -46,9 +47,15 @@ class App extends React.Component {
   showButton = () => {
     if (this.state.show) {
       return (
-        <button className="ui pink button" onClick={this.handleClick}>
-          点我!
-        </button>
+        <div>
+          <button className="ui orange button" onClick={this.handleClick}>
+            点我!
+          </button>
+          <img
+            style={{ marginLeft: "-212px", height: "auto" }}
+            src={firstPic}
+          />
+        </div>
       );
     } else {
       return null;
@@ -57,7 +64,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="backgroud">
+      <div className="before">
         {this.showButton()}
 
         <div className="later">
