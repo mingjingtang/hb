@@ -54,6 +54,7 @@ class App extends React.Component {
           <img
             style={{ marginLeft: "-212px", height: "auto" }}
             src={firstPic}
+            alt="monAndDaughter"
           />
         </div>
       );
