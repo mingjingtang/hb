@@ -13,6 +13,10 @@ class App extends React.Component {
     show: false,
   };
 
+  componentDidMount() {
+    this.setState({ show: true });
+  }
+
   handleClick = (e) => {
     e.preventDefault();
     console.log("This has been clicked!");
@@ -35,16 +39,26 @@ class App extends React.Component {
           </h5>
         </div>
       ),
-      show: true,
+      show: false,
     });
+  };
+
+  showButton = () => {
+    if (this.state.show) {
+      return (
+        <button className="ui pink button" onClick={this.handleClick}>
+          点我!
+        </button>
+      );
+    } else {
+      return null;
+    }
   };
 
   render() {
     return (
       <div className="backgroud">
-        <button className="ui pink button" onClick={this.handleClick}>
-          点我!
-        </button>
+        {this.showButton()}
 
         <div className="later">
           <Song song={this.state.songTrackSource} />
