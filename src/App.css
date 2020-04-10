@@ -1,12 +1,3 @@
-.later {
-  display: center;
-  width: 300px;
-  margin: 0em, auto;
-}
-
-.text {
-  display: center;
-  margin-top: 55px;
-  margin-left: 50px;
-  margin-right: auto;
+.letter {
+  padding: 3em;
 }

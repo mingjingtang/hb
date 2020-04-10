@@ -10,7 +10,6 @@ class App extends React.Component {
   state = {
     songTrackSource: null,
     cakeSource: null,
-    words: "",
     show: false,
   };
 
@@ -23,23 +22,29 @@ class App extends React.Component {
     console.log("This has been clicked!");
     this.setState({
       songTrackSource: soundfile,
-      cakeSource: cakefile,
-      words: (
-        <div className="text">
-          <h5>
-            妈妈：
-            <br />
-            <span style={{ marginLeft: "1em" }} /> 生日快乐！
-            <br />
-            <span style={{ marginLeft: "1em" }} />
-            没想到时间这么快，你就58岁了！真希望能和你一起庆祝生日，和其他在长沙的亲戚和朋友一样。
-            <br /> <span style={{ marginLeft: "1em" }} />
-            虽然不能陪在你身边，但希望你能感受到我的祝福。
-            <br /> <span style={{ marginLeft: "10em" }} />
-            爱你的女儿❤️
-          </h5>
+      cakeSource: (
+        <div className="ui segment">
+          <div className="ui fluid image">
+            <img src={cakefile} alt="cakeImage" />
+          </div>
+
+          <div className="letter">
+            <h5>
+              妈妈：
+              <br />
+              <span style={{ marginLeft: "1em" }} /> 生日快乐！
+              <br />
+              <span style={{ marginLeft: "1em" }} />
+              没想到时间这么快，你就58岁了！真希望能和你一起庆祝生日，和其他在长沙的亲戚和朋友一样。
+              <br /> <span style={{ marginLeft: "1em" }} />
+              虽然不能陪在你身边，但希望你能感受到我的祝福。
+              <br /> <span style={{ marginLeft: "10em" }} />
+              爱你的女儿❤️
+            </h5>
+          </div>
         </div>
       ),
+
       show: false,
     });
   };
@@ -47,12 +52,12 @@ class App extends React.Component {
   showButton = () => {
     if (this.state.show) {
       return (
-        <div>
+        <div className="ui segment" style={{ display: "block" }}>
           <button className="ui orange button" onClick={this.handleClick}>
             点我!
           </button>
           <img
-            style={{ marginLeft: "-212px", height: "auto" }}
+            className="ui centered image"
             src={firstPic}
             alt="monAndDaughter"
           />
@@ -65,12 +70,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="before">
+      <div className="ui container">
         {this.showButton()}
 
-        <div className="later">
+        <div>
           <Song song={this.state.songTrackSource} />
-          <Cake cake={this.state.cakeSource} words={this.state.words}></Cake>
+          <Cake cake={this.state.cakeSource}></Cake>
         </div>
       </div>
     );
