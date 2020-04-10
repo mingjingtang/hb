@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import Cake from "./Cake";
 import Song from "./Song";
-import soundfile from "./resource/song.mp3";
-import cakefile from "./resource/birthdayCake.gif";
-import firstPic from "./resource/firstPic.jpg";
+import soundfile from "../resource/song.mp3";
+import cakefile from "../resource/birthdayCake.gif";
+import firstPic from "../resource/firstPic.jpg";
 
 class App extends React.Component {
   state = {
