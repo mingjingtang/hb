@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.css";
-import Cake from "./Cake";
-import Song from "./Song";
+import MainPage from "./MainPage/MainPage";
 import soundfile from "../resource/song.mp3";
-import cakefile from "../resource/birthdayCake.gif";
-import firstPic from "../resource/firstPic.jpg";
+import background from "../resource/page1-bg.jpg";
+import Typewriter from "typewriter-effect";
 
 class App extends React.Component {
   state = {
@@ -58,7 +57,7 @@ class App extends React.Component {
           </button>
           <img
             className="ui centered image"
-            src={firstPic}
+            src={background}
             alt="monAndDaughter"
           />
         </div>
