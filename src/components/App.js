@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     const renderContent =
       this.state.show === false ? (
-        <div className="ui segment" style={{ height: "600px" }}>
+        <div className="ui segment" style={{ height: "640px" }}>
           <Image
             className="outside"
             style={{ height: "100%", width: "100%" }}

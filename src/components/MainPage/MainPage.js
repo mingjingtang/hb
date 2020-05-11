@@ -8,7 +8,7 @@ import { Image } from "semantic-ui-react";
 export default class MainPage extends React.Component {
   render() {
     return (
-      <div className="ui segment" style={{ height: "600px" }}>
+      <div className="ui segment" style={{ height: "640px" }}>
         <div className="player">
           <ReactAudioPlayer src={soundfile} autoPlay controls />
         </div>
@@ -36,7 +36,7 @@ export default class MainPage extends React.Component {
             <span style={{ marginLeft: "1em" }} />
             你一直说，你是我坚强的后盾，我现在也在努力，希望以后成为你坚强的后盾。能陪你渡过病痛与伤心，能让你拥有安全感，就像你一直对我这样！
             <br />
-            <span style={{ marginLeft: "8em" }} />
+            <span style={{ marginLeft: "6em" }} />
             最爱你的女儿：蓉蓉
           </div>
         </div>
