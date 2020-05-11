@@ -1,81 +1,61 @@
 import React from "react";
 import "./App.css";
 import MainPage from "./MainPage/MainPage";
-import soundfile from "../resource/song.mp3";
-import background from "../resource/page1-bg.jpg";
+import flower from "../resource/page1-bg.jpg";
 import Typewriter from "typewriter-effect";
+import { Image } from "semantic-ui-react";
 
 class App extends React.Component {
   state = {
-    songTrackSource: null,
-    cakeSource: null,
     show: false,
   };
-
-  componentDidMount() {
-    this.setState({ show: true });
-  }
 
   handleClick = (e) => {
     e.preventDefault();
     console.log("This has been clicked!");
     this.setState({
-      songTrackSource: soundfile,
-      cakeSource: (
-        <div className="ui segment">
-          <div className="ui fluid image">
-            <img src={cakefile} alt="cakeImage" />
-          </div>
-
-          <div className="letter">
-            <h5>
-              妈妈：
-              <br />
-              <span style={{ marginLeft: "1em" }} /> 生日快乐！
-              <br />
-              <span style={{ marginLeft: "1em" }} />
-              没想到时间这么快，你就58岁了！真希望能和你一起庆祝生日，和其他在长沙的亲戚和朋友一样。
-              <br /> <span style={{ marginLeft: "1em" }} />
-              虽然不能陪在你身边，但希望你能感受到我的祝福。
-              <br /> <span style={{ marginLeft: "10em" }} />
-              爱你的女儿❤️
-            </h5>
-          </div>
-        </div>
-      ),
-
-      show: false,
+      show: true,
     });
   };
 
-  showButton = () => {
-    if (this.state.show) {
-      return (
-        <div className="ui segment" style={{ display: "block" }}>
-          <button className="ui orange button" onClick={this.handleClick}>
-            点我!
-          </button>
-          <img
-            className="ui centered image"
-            src={background}
-            alt="monAndDaughter"
-          />
-        </div>
-      );
-    } else {
-      return null;
-    }
-  };
-
   render() {
+    const renderContent =
+      this.state.show === false ? (
+        <div className="ui segment" style={{ height: "600px" }}>
+          <Image
+            className="outside"
+            style={{ height: "100%", width: "100%" }}
+            src={flower}
+            alt="flower"
+          />
+          <div className="inside" onClick={this.handleClick}>
+            <div className="content">
+              <Typewriter
+                options={{
+                  strings: ["点击我，有惊喜！"],
+                  autoStart: true,
+                  loop: true,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("点击我，有惊喜!")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(4500)
+                    .start();
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <MainPage />
+      );
+
     return (
       <div className="ui container">
-        {this.showButton()}
-
-        <div>
-          <Song song={this.state.songTrackSource} />
-          <Cake cake={this.state.cakeSource}></Cake>
-        </div>
+        <div className="column">{renderContent}</div>
       </div>
     );
   }

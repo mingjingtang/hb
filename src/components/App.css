@@ -1,3 +1,24 @@
 .letter {
   padding: 3em;
 }
+
+.outside {
+  position: absolute;
+}
+
+.inside {
+  position: absolute;
+  background-color: #ae4875;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  height: 120px;
+  line-height: 200px;
+  text-align: center;
+}
