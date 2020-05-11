@@ -1,3 +1,31 @@
 .player {
   display: none;
 }
+
+.ui segment {
+  background: gray;
+}
+
+.out {
+  position: absolute;
+}
+
+.in {
+  position: absolute;
+  background-color: darkgray;
+  line-height: 18px;
+  opacity: 80%;
+  width: 88%;
+  height: 50%;
+  top: 2.3%;
+  left: 7%;
+  color: white;
+  cursor: pointer;
+  font-family: "Zhi Mang Xing";
+  font-size: 19px;
+  font-size: 15px;
+}
+
+.letter {
+  padding: 10px;
+}

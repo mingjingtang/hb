@@ -1,7 +1,3 @@
-.letter {
-  padding: 3em;
-}
-
 .outside {
   position: absolute;
 }
@@ -15,6 +11,8 @@
   left: 25%;
   color: white;
   cursor: pointer;
+  font-family: "Long Cang";
+  font-size: 19px;
 }
 
 .content {

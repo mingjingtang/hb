@@ -32,13 +32,13 @@ class App extends React.Component {
             <div className="content">
               <Typewriter
                 options={{
-                  strings: ["点击我，有惊喜！"],
+                  strings: ["点击我，有惊喜"],
                   autoStart: true,
                   loop: true,
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("点击我，有惊喜!")
+                    .typeString("点击我，有惊喜")
                     .callFunction(() => {
                       console.log("String typed out!");
                     })
@@ -54,9 +54,11 @@ class App extends React.Component {
       );
 
     return (
-      <div className="ui container">
-        <div className="column">{renderContent}</div>
-      </div>
+      <main className="main">
+        <div className="ui container">
+          <div className="column">{renderContent}</div>
+        </div>
+      </main>
     );
   }
 }
