@@ -8,16 +8,16 @@
 
 .in {
   position: absolute;
-  background-color: gray;
+  background-color: darkgray;
   line-height: 18px;
   opacity: 0.8;
-  width: 88%;
+  width: 90%;
   height: 50%;
   top: 2.3%;
-  left: 7%;
+  left: 5%;
   color: white;
-  font-family: "Zhi Mang Xing";
-  font-size: 15px;
+  font-family: "Long Cang";
+  font-size: 16px;
 }
 
 .letter {
